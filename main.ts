@@ -1,0 +1,13 @@
+input.onButtonPressed(Button.A, function () {
+    Maqueen_V5.motorRun(Maqueen_V5.Motors.All, Maqueen_V5.Dir.CW, 100)
+    basic.pause(500)
+    Maqueen_V5.motorRun(Maqueen_V5.Motors.M1, Maqueen_V5.Dir.CCW, 100)
+    basic.pause(400)
+    Maqueen_V5.motorStop(Maqueen_V5.Motors.All)
+    Maqueen_V5.setRgblLed(Maqueen_V5.DirectionType.All, Maqueen_V5.CarLightColors.Cyan)
+    basic.pause(2000)
+    Maqueen_V5.setRgbOff(Maqueen_V5.DirectionType.All)
+    music.play(music.stringPlayable("C D E F F F C D ", 120), music.PlaybackMode.UntilDone)
+    music.play(music.stringPlayable("C D D D C G F E ", 120), music.PlaybackMode.UntilDone)
+    music.play(music.stringPlayable("E E C D E F F F ", 120), music.PlaybackMode.UntilDone)
+})
